@@ -134,6 +134,16 @@ footer { padding: 40px 0; border-top: 0.5px solid var(--border); }
 .footer-links a:hover { color: var(--text); }
 .badge { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; background: var(--tag-bg); color: var(--tag-text); padding: 4px 10px; border-radius: 4px; margin-bottom: 10px; border: 0.5px solid var(--border); }
 .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: #3d9a6a; flex-shrink: 0; }
+.cert-item { display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 20px 0; border-top: 0.5px solid var(--border); }
+.cert-item:first-child { border-top: none; padding-top: 0; }
+.cert-issuer { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--subtle); margin-bottom: 5px; }
+.cert-name { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+.cert-tasks { font-size: 13px; color: var(--muted); line-height: 1.55; }
+.cert-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; padding-top: 3px; }
+.cert-date { font-family: var(--mono); font-size: 11px; color: var(--subtle); letter-spacing: 0.04em; white-space: nowrap; }
+.cert-verify { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--muted); padding: 4px 9px; border: 0.5px solid var(--border-md); border-radius: 4px; text-decoration: none; transition: color 0.15s, border-color 0.15s; white-space: nowrap; }
+.cert-verify:hover { color: var(--text); }
+.cert-code { font-family: var(--mono); font-size: 10px; color: var(--subtle); letter-spacing: 0.04em; white-space: nowrap; }
 @media (max-width: 540px) {
 .nav-links { gap: 16px; }
 .exp-item { grid-template-columns: 1fr; }
@@ -143,6 +153,8 @@ footer { padding: 40px 0; border-top: 0.5px solid var(--border); }
 .edu-item { grid-template-columns: 1fr; }
 .skills-grid { grid-template-columns: 1fr; }
 .footer-inner { flex-direction: column; align-items: flex-start; }
+.cert-item { grid-template-columns: 1fr; }
+.cert-right { align-items: flex-start; }
 }
 </style>
 </head>
@@ -156,6 +168,7 @@ footer { padding: 40px 0; border-top: 0.5px solid var(--border); }
 <li><a href="#projects">Projects</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#certifications">Certs</a></li>
 <li><a href="mailto:kumarabhay1819@gmail.com">Email</a></li>
 </ul>
 </div>
@@ -392,12 +405,88 @@ AI-driven security audit tool using Gemini AI that auto-generates OWASP Top-10 v
 <div class="skill-group">
 <p class="skill-group-label">Certifications</p>
 <div class="skill-items">
+<span class="tag">Java (Basic) · HackerRank</span>
+<span class="tag">Software Engineer · HackerRank</span>
 <span class="tag">Cybersecurity Analyst · TCS/Forage</span>
 <span class="tag">Intro to CyberSecurity · Cisco</span>
-<span class="tag">Software Engineering · Forage</span>
+<span class="tag">Software Engineering · JPMorgan/Forage</span>
 </div>
 </div>
 </div>
+</div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications">
+<div class="wrap">
+<p class="section-label">Certifications</p>
+
+<!-- RRRAI 2026 -->
+<div class="cert-item">
+<div>
+<p class="cert-issuer">RRRAI 2026 · International Conference · Bharati Vidyapeeth, Pune</p>
+<p class="cert-name">Certificate of Appreciation — Paper Presentation</p>
+<p class="cert-tasks">Presented paper <em>"Responsible AI-Driven Non Evasive Glucometer"</em> at the International Conference on Responsible, Risk-Aware and Regulated AI. Publication partners: Atlantis Press / Springer Nature, Taylor &amp; Francis, Wiley.</p>
+</div>
+<div class="cert-right">
+<span class="cert-date">Apr 2026</span>
+</div>
+</div>
+
+<!-- HackerRank Software Engineer -->
+<div class="cert-item">
+<div>
+<p class="cert-issuer">HackerRank</p>
+<p class="cert-name">Software Engineer</p>
+<p class="cert-tasks">Role certification — passed HackerRank skill assessment covering data structures, algorithms, and software engineering fundamentals.</p>
+</div>
+<div class="cert-right">
+<span class="cert-date">Jun 2026</span>
+<a href="https://www.hackerrank.com/certificates/CC571F6CAE24" target="_blank" rel="noopener" class="cert-verify">Verify ↗</a>
+<span class="cert-code">ID: CC571F6CAE24</span>
+</div>
+</div>
+
+<!-- HackerRank Java Basic -->
+<div class="cert-item">
+<div>
+<p class="cert-issuer">HackerRank</p>
+<p class="cert-name">Java (Basic)</p>
+<p class="cert-tasks">Skill certification — passed HackerRank assessment covering Java fundamentals, OOP, data structures, and collections.</p>
+</div>
+<div class="cert-right">
+<span class="cert-date">Jun 2026</span>
+<a href="https://www.hackerrank.com/certificates/6E2FBB5EC6F0" target="_blank" rel="noopener" class="cert-verify">Verify ↗</a>
+<span class="cert-code">ID: 6E2FBB5EC6F0</span>
+</div>
+</div>
+
+<!-- JPMorgan Forage -->
+<div class="cert-item">
+<div>
+<p class="cert-issuer">JPMorgan Chase &amp; Co. · Forage</p>
+<p class="cert-name">Software Engineering Job Simulation</p>
+<p class="cert-tasks">Project Setup · Kafka Integration · H2 Integration · REST API Integration · REST API Controller</p>
+</div>
+<div class="cert-right">
+<span class="cert-date">Jun 2025</span>
+<span class="cert-code">Enrolment: StYwFQFZbTKMt3piC</span>
+</div>
+</div>
+
+<!-- Tata Forage -->
+<div class="cert-item">
+<div>
+<p class="cert-issuer">Tata Consultancy Services · Forage</p>
+<p class="cert-name">Cybersecurity Analyst Job Simulation</p>
+<p class="cert-tasks">IAM fundamentals · IAM strategy assessment · Crafting custom IAM solutions · Platform integration</p>
+</div>
+<div class="cert-right">
+<span class="cert-date">Jun 2025</span>
+<span class="cert-code">Enrolment: FiT3G2wF7n4au7HgY</span>
+</div>
+</div>
+
 </div>
 </section>
 
