@@ -109,6 +109,9 @@ section:last-child { border-bottom: none; }
 .project-arrow { font-size: 14px; color: var(--subtle); padding-top: 3px; flex-shrink: 0; }
 .project-item:hover .project-arrow { color: var(--text); }
 .project-item:hover .project-title { text-decoration: underline; text-underline-offset: 3px; }
+.project-links { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.project-link { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--muted); padding: 4px 9px; border: 0.5px solid var(--border-md); border-radius: 4px; text-decoration: none; transition: color 0.15s, border-color 0.15s; }
+.project-link:hover { color: var(--text); }
 .exp-item { display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 20px 0; border-top: 0.5px solid var(--border); }
 .exp-item:first-child { border-top: none; padding-top: 0; }
 .exp-role { font-size: 15px; font-weight: 500; margin-bottom: 2px; }
@@ -195,6 +198,9 @@ Passionate about <strong>clean, testable code</strong> and solving real-world pr
 <a href="https://hireflow-psi-bice.vercel.app/login" target="_blank" rel="noopener" class="btn btn-primary">
 ↗ HireFlow Demo
 </a>
+<a href="https://cyberaudit-eight.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">
+↗ CyberAudit Demo
+</a>
 <a href="https://linkedin.com/in/abhay-kumar-256b6a19a" target="_blank" rel="noopener" class="btn">LinkedIn</a>
 <a href="https://github.com/Abhaykumar234" target="_blank" rel="noopener" class="btn">GitHub</a>
 <a href="mailto:kumarabhay1819@gmail.com" class="btn">Email</a>
@@ -255,26 +261,30 @@ Passionate about <strong>clean, testable code</strong> and solving real-world pr
 <div class="projects-list">
 
 <!-- HireFlow -->
-<a href="https://hireflow-psi-bice.vercel.app/login" target="_blank" rel="noopener" class="project-item">
+<div class="project-item" style="cursor: default;">
 <span class="project-num">01</span>
 <div class="project-body">
 <p class="project-title">HireFlow — Full-Stack Recruitment Platform</p>
 <p class="project-desc">
-Production-grade Applicant Tracking System with Spring Boot REST APIs and React. Implements 3-role RBAC (Admin / Recruiter / Candidate) with granular permission gates across 15+ API endpoints. Complete JWT auth lifecycle with refresh token rotation, account lockout, and email verification — no third-party auth dependencies.
+Production-grade Applicant Tracking System built with Spring Boot 3.4 and React 18. Enforces 3-role RBAC (Admin / Recruiter / Candidate) with method-level security across 15+ REST endpoints — jobs, applications, notifications, and user profiles. Full JWT auth lifecycle: 24h access tokens, 7-day refresh rotation, BCrypt password hashing (strength 12), and account lockout after 5 failed attempts. Zero third-party auth dependencies. Deployed on Vercel + Render with PostgreSQL in production.
 </p>
 <div class="project-tags">
-<span class="tag">Spring Boot</span>
-<span class="tag">React</span>
+<span class="tag">Spring Boot 3.4</span>
+<span class="tag">React 18</span>
 <span class="tag">PostgreSQL</span>
 <span class="tag">JWT</span>
-<span class="tag">Docker</span>
+<span class="tag">Spring Security</span>
+<span class="tag">Tailwind CSS</span>
 <span class="tag">Vercel</span>
 <span class="tag">Render</span>
-<span class="tag">Supabase</span>
+</div>
+<div class="project-links">
+<a href="https://hireflow-psi-bice.vercel.app/login" target="_blank" rel="noopener" class="project-link">↗ Live Demo</a>
+<a href="https://github.com/Abhaykumar234/Hireflow" target="_blank" rel="noopener" class="project-link">GitHub</a>
 </div>
 </div>
-<span class="project-arrow">↗</span>
-</a>
+<span class="project-arrow" style="opacity:0">↗</span>
+</div>
 
 <!-- NIR Glucometer -->
 <div class="project-item" style="cursor: default;">
@@ -283,7 +293,7 @@ Production-grade Applicant Tracking System with Spring Boot REST APIs and React.
 <div class="badge"><span class="badge-dot"></span>Presented · RRRAI 2026 International Conference on Responsible AI</div>
 <p class="project-title">NIR Glucometer — AI/ML Medical IoT Device</p>
 <p class="project-desc">
-Non-invasive glucose meter using NIR spectroscopy. Trained an XGBoost regression model on 25,000 augmented samples achieving MAE of 1.5 mg/dL and 100% Clarke Error Grid Zone A accuracy. SHAP explainability for clinical transparency. End-to-end IoT pipeline: ESP32 → Flask REST API, under 2 seconds per reading.
+Non-invasive glucose meter using NIR spectroscopy. Trained an XGBoost regression model on 25,000 augmented samples achieving 78.4% Clarke Error Grid Zone A accuracy and MAE of 1.5 mg/dL. SHAP explainability for clinical transparency. End-to-end IoT pipeline: ESP32 → Flask REST API, under 2 seconds per reading.
 </p>
 <div class="project-tags">
 <span class="tag">XGBoost</span>
@@ -293,6 +303,9 @@ Non-invasive glucose meter using NIR spectroscopy. Trained an XGBoost regression
 <span class="tag">NIR Spectroscopy</span>
 <span class="tag">Python</span>
 </div>
+<div class="project-links">
+<a href="https://github.com/Abhaykumar234/Non-Invasive-Glucometer-Testing" target="_blank" rel="noopener" class="project-link">GitHub</a>
+</div>
 </div>
 <span class="project-arrow" style="opacity:0">↗</span>
 </div>
@@ -301,18 +314,25 @@ Non-invasive glucose meter using NIR spectroscopy. Trained an XGBoost regression
 <div class="project-item" style="cursor: default;">
 <span class="project-num">03</span>
 <div class="project-body">
-<p class="project-title">CyberAudit Pro — AI-Powered Penetration Testing Platform</p>
+<p class="project-title">CyberAudit Pro — AI-Powered Security Audit Platform</p>
 <p class="project-desc">
-AI-driven security audit tool using Gemini AI that auto-generates OWASP Top-10 vulnerability reports and actionable remediation steps in under 10 seconds — cutting manual pen-test reporting time by ~70%. Enterprise-grade RBAC with full audit logging on Firebase, aligned with SOC 2 standards.
+Full-stack vulnerability management platform combining real-time scanning with AI-driven analysis. Built a custom scanner engine (port scanning, SSL checks, security headers, path discovery) that runs without any external API — then layered Claude AI on top for deep OWASP Top-10 audit reports and automated code vulnerability analysis, cutting manual pen-test reporting time by ~70%. Enforces JWT-secured RBAC across 10+ REST endpoints with full SOC 2-aligned audit trail logging on every security event.
 </p>
 <div class="project-tags">
+<span class="tag">Spring Boot</span>
+<span class="tag">Java 21</span>
 <span class="tag">React</span>
 <span class="tag">TypeScript</span>
-<span class="tag">Gemini AI</span>
-<span class="tag">Firebase</span>
+<span class="tag">Claude AI</span>
+<span class="tag">JWT</span>
+<span class="tag">PostgreSQL</span>
+<span class="tag">Docker</span>
 <span class="tag">OWASP Top 10</span>
-<span class="tag">CI/CD</span>
-<span class="tag">Vercel</span>
+<span class="tag">SOC 2</span>
+</div>
+<div class="project-links">
+<a href="https://cyberaudit-eight.vercel.app/" target="_blank" rel="noopener" class="project-link">↗ Live Demo</a>
+<a href="https://github.com/Abhaykumar234/Cyberaudit-" target="_blank" rel="noopener" class="project-link">GitHub</a>
 </div>
 </div>
 <span class="project-arrow" style="opacity:0">↗</span>
